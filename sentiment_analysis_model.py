@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 
 # Inicializando o lemmatizer e o conjunto de stopwords
 lemmatizer = WordNetLemmatizer()
-nltk.data.path.append('data')
+nltk.data.path.append('./')
 english_stopwords = set(stopwords.words('english'))
 
 # Carregar o modelo treinado e o tokenizer
