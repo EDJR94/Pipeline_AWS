@@ -2,6 +2,7 @@ import numpy as np
 import re
 import string
 import pickle
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
@@ -10,6 +11,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 
 # Inicializando o lemmatizer e o conjunto de stopwords
 lemmatizer = WordNetLemmatizer()
+nltk.data.path.append('data')
 english_stopwords = set(stopwords.words('english'))
 
 # Carregar o modelo treinado e o tokenizer
